@@ -1,0 +1,7 @@
+Resources
+=========
+
+* See resources for each lecture in the summaries pages.
+    ** link:summaries-leic41d.adoc[LEIC41D]
+    ** link:summaries-leic41n.adoc[LEIC41N]
+* link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main[A course on Concurrent Programming for the JVM]

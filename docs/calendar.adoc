@@ -4,61 +4,75 @@ Course Calendar
 Work assignments calendar (tentative)
 -------------------------------------
 
-* First assignment: TBD.
-* Second assignment: TBD.
-* Third assignment: TBD.
+* First assignment: published until March 10 (start of week 4) and delivered until March 30 (end of week 6).
+* Second assignment: published until April 7 (start of week 8) and delivered until May 4 (end of week 11).
+* Third assignment: published until May 12 (start of week 13) and delivered until June 1 (end of week 15).
 
-Weekly tentative schedule
+Tentative weekly schedule
 -------------------------
 
 * W1 - 2025-02-17
-
+    ** Course introduction.
+    ** Introduction to concurrent programming in the JVM platform:
+        *** Motivation.
+        *** Thread creation and basic synchronization.
+        *** Threading hazards.
 
 * W2 - 2025-02-24
-
+    ** A model for how threads are implemented.
+        *** Multiple CPUs.
+        *** Time-multiplexing of multiple threads.
+    ** The uthreads multi-threading system.
+        *** Context and context switching.
+        *** Thread scheduling and thread states.
+        *** Interaction between I/O, thread states, and scheduling.
 
 * W3 - 2025-03-03
-** No classes on Mondays and Tuesday due to the Carnival break.
-
+    ** No classes on Mondays and Tuesday due to the Carnival break.
+    ** Data and control synchronization.
+        *** Data synchronization, mutual exclusion and Locks.
+        *** Control synchronizations and non-busy waiting. 
+        *** Examples of synchronizers.
 
 * W4 - 2025-03-10
-
+    ** Monitors and their semantics.
+    ** Using monitors to build custom synchronizers.
 
 * W5 - 2025-03-17
-
+    ** Using monitors to build custom synchronizers.
 
 * W6 - 2025-03-24
-
+    ** The Java Memory Model.
+    ** Laboratory classes.
 
 * W7 - 2025-04-31
-
+    ** Kotlin Coroutines.
 
 * W8 - 2025-04-07
-
+    ** Kotlin Coroutines.
 
 * W9 - 2025-04-14
-** No classes on Thursday and Friday due to the Easter break and holiday.
-
+    ** No classes on Thursday and Friday due to the Easter break and holiday.
+    ** Kotlin Coroutines.
 
 * W10 - 2025-04-21
-** No classes all week due to the Easter break and holiday.
+    ** No classes all week due to the Easter break and holiday.
 
 
 * W11 - 2025-04-28
-** No classes on Thursday due to the national holiday.
-
+    ** Laboratory classes.    
 
 * W12 - 2025-05-05
-
+    ** Asynchronous I/O in the JVM platform and its integration with coroutines.
 
 * W13 - 2025-05-12
-
+    ** Kotlin flows.
 
 * W14 - 2025-05-19
-
+    ** Lock-free algorithms and data structures.
 
 * W15 - 2025-05-26
-
+    ** Laboratory classes.
 
 * W16 - 2025-06-02
-
+    ** Laboratory classes and project evaluation.

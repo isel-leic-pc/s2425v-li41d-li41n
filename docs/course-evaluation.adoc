@@ -1,0 +1,13 @@
+Course evaluation
+=================
+
+* Three practical work assignments (projects).
+    ** Groups of 3 elements.
+    ** Requires 8.0 minimum grade on each assignment.
+    ** Requires 9.5 minimum on the assignments grade average.
+    ** 40% of the final grade.
+
+* Written exame.
+    ** Individual.
+    ** Requires 9.5 minimum grade.
+    ** 60% of the final grade.
