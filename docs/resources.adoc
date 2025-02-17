@@ -4,4 +4,14 @@ Resources
 * See resources for each lecture in the summaries pages.
     ** link:summaries-leic41d.adoc[LEIC41D]
     ** link:summaries-leic41n.adoc[LEIC41N]
-* link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main[A course on Concurrent Programming for the JVM]
+    ** Lecture notes, example code, links to product documentation.
+* Lecture Notes - link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main[A course on Concurrent Programming for the JVM]
+    ** Contents will be updated during the semester.
+* Book - link:https://jcip.net[Java Concurrency In Practice].
+
+* Resources from previous semesters
+    ** Content may not reflect the current course programme.
+    ** link:https://educast.fccn.pt/vod/channels/1ltu5ml481[Lecture recordings, in Portuguese].
+    ** link:https://docs.google.com/presentation/d/e/2PACX-1vQq_qqpJRuEQh9iJOlmwgJcumuRpgOxWLpe_Pz9Ecsz565OA2bl9PitjC-EvyISraPNQGQGmFE4Yr7l/pub?start=false&loop=false&delayms=3000[Drawings].
+    ** link:https://youtube.com/playlist?list=PL8XxoCaL3dBiv-3pHZLbFGYsQiJa9X73o&si=TGKeIIcRJjV25QQG[Lecture recordings by Prof. Paulo Pereira, in Portuguese].
+

@@ -1,2 +1,3 @@
-= Lecture summaries - LEIC41N
+Lecture summaries - LEIC41N
+===========================
 :toc: auto
