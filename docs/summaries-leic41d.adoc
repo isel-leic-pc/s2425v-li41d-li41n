@@ -18,5 +18,20 @@ Lecture 1 - 2025-02-18 - 3h
         *** See link:tools.adoc[Tools].
 
 * Introduction to concurrent programming and its challenges
-    ** A motivating example
-        *** A TCP server
+    ** A motivating example - a TCP server
+        *** Handling a single client at a time.
+        *** Handling multiple clients simultaneously.
+    ** Thread creation in the JVM.
+        *** Available mechanisms.
+        *** Consequences and hazards.
+    ** Threading hazards.
+        *** E.g. Lost increments.
+        *** E.g. Lost insertions.
+        *** E.g. Check-then-act.
+
+* A model to understand platform threads
+    ** Multiple CPUs operating on shared memory.
+    ** Shared data and exclusive data.
+    ** Time-multiplexing of M threads over N CPUs.
+    *** Scheduling and context switching.
+    *** Threads states and non-busy waiting.
