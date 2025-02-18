@@ -1,3 +1,18 @@
 Lecture summaries - LEIC41N
 ===========================
 :toc: auto
+
+Lecture 1 - 2025-02-18 - 1.5h
+-----------------------------
+* Course introduction
+    ** link:https://isel.pt/sites/default/files/FUC_202425_1637.pdf[_Ficha de Unidade Curricular_].
+    ** Goals
+    ** Programme
+        *** 16 weeks, including one week without lectures and some national holidays.
+        *** See link:calendar.adoc[Calendar].
+    ** Evaluation
+        *** See link:course-evaluation.adoc[Course evaluation].
+    ** Resources
+        *** See link:resources.adoc[Resources].
+    ** Tooling
+        *** See link:tools.adoc[Tools].

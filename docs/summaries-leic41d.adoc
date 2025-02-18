@@ -27,11 +27,9 @@ Lecture 1 - 2025-02-18 - 3h
     ** Threading hazards.
         *** E.g. Lost increments.
         *** E.g. Lost insertions.
-        *** E.g. Check-then-act.
 
-* A model to understand platform threads
-    ** Multiple CPUs operating on shared memory.
-    ** Shared data and exclusive data.
-    ** Time-multiplexing of M threads over N CPUs.
-    *** Scheduling and context switching.
-    *** Threads states and non-busy waiting.
+* Resources:
+    ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/blob/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches/apps/MyFirstTcpServer.kt[`MyFirstTcpServer`] developed during the lecture.
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main/code/jvm/src/main/kotlin/org/pedrofelix/concurrency/course/apps/tcpserver[Different versions for the TCP server].
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/a-motivating-example-tcp-server.adoc[A motivating example].
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/threading-data-hazards.adoc[Threading data hazards].
