@@ -30,6 +30,9 @@ Lecture 2 - 2025-02-21 - 3.0h
         *** E.g. Lost increments.
         *** E.g. Lost insertions.
 
+* Exercises
+    ** Setting up the development environment and making sure it is working correctly - see link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/exercises/environment-setup.adoc[Environment setup].
+
 * Resources:
     ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/blob/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches41n/apps/MyFirstTcpServer.kt[`MyFirstTcpServer`] developed during the lecture.
     ** link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main/code/jvm/src/main/kotlin/org/pedrofelix/concurrency/course/apps/tcpserver[Different versions for the TCP server].
