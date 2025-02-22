@@ -16,3 +16,22 @@ Lecture 1 - 2025-02-18 - 1.5h
         *** See link:resources.adoc[Resources].
     ** Tooling
         *** See link:tools.adoc[Tools].
+
+Lecture 2 - 2025-02-21 - 3.0h
+-----------------------------
+* Introduction to concurrent programming and its challenges
+    ** A motivating example - a TCP server
+        *** Handling a single client at a time.
+        *** Handling multiple clients simultaneously.
+    ** Thread creation in the JVM.
+        *** Available mechanisms.
+        *** Consequences and hazards.
+    ** Threading hazards.
+        *** E.g. Lost increments.
+        *** E.g. Lost insertions.
+
+* Resources:
+    ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/blob/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches41n/apps/MyFirstTcpServer.kt[`MyFirstTcpServer`] developed during the lecture.
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main/code/jvm/src/main/kotlin/org/pedrofelix/concurrency/course/apps/tcpserver[Different versions for the TCP server].
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/a-motivating-example-tcp-server.adoc[A motivating example].
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/threading-data-hazards.adoc[Threading data hazards].
