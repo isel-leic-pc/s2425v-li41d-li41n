@@ -45,6 +45,7 @@ Lecture 2 - 2025-02-21 - 1.5h
     ** Thread-safety definition.
         *** Examples.
         *** Non-composability of thread-safety.
+
 * A model of how threads are implemented.
     ** Multiple processors using shared memory.
     ** Thread shared memory areas and thread exclusive memory areas.
@@ -54,5 +55,35 @@ Lecture 2 - 2025-02-21 - 1.5h
 * Resources
     ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/platform-threads-introduction.adoc[Platform threads].
 
+Lecture 3 - 2025-02-25 - 3.0h
+-----------------------------
 
+* The _uthreads_ user-space multithreading system.
+    ** Thread data structures - stack and descriptor.
+    ** Suspending and resuming _uthreads_ - the `context_switch` function.
+    ** Creating and terminating _uthreads_.
+    ** The _uthreads_ system data structures, namely the ready queue.
+    ** The _uthreads_ scheduling function.
 
+* Exercises
+    ** Setting up the development environment and making sure it is working correctly - see link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/exercises/environment-setup.adoc[Environment setup].
+    ** _uthreads_ - see link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/exercises/uthreads.adoc[_uthreads_ exercises].
+
+* Resources
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/uthreads.adoc[_uthreads_ - User Mode Cooperative Threads].
+
+Lecture 4 - 2025-02-28 - 1.5h
+-----------------------------
+
+* Adding control synchronization to the _uthreads_ system.
+    ** Busy-waiting vs non-busy waiting.
+    ** Adding a list of _joiners_ to each thread descriptor.
+    ** Kernel-style (execution delegation).
+
+* Adding I/O based control synchronization to the _uthreads_ system.
+    ** Socket operations in the Linux Operating System.
+    ** Non-blocking operation mode and the _epoll_ API.
+    ** Changing the _uthreads_ system to support non-busy I/O control synchronization using _epoll_.
+
+* Resources
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/uthreads.adoc[_uthreads_ - User Mode Cooperative Threads].
