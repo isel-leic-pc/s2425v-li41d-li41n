@@ -87,3 +87,20 @@ Lecture 4 - 2025-02-28 - 1.5h
 
 * Resources
     ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/uthreads.adoc[_uthreads_ - User Mode Cooperative Threads].
+
+Lecture 5 - 2025-03-07 - 1.5h
+-----------------------------
+
+* Data synchronization on mutable shared state
+    ** Mutual exclusion and locks.
+        ** The lock acquisition/lock and release/unlock protocol.
+    ** Locks in the JVM.
+        *** The link:https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/Lock.html[`Lock` interface] and the link:https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/ReentrantLock.html[`ReentrantLock` class].
+        *** The link:https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.concurrent/with-lock.html[`withLock` Kotlin function].
+    ** Using the `class` mechanism to encapsulate the state protected by locks.
+    ** Justification for the reentrancy support.
+    ** Common errors when using locks.
+
+* Resources
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/data-synchronization-jvm.adoc[Data synchronization in the JVM].
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/code/jvm/src/test/kotlin/org/pedrofelix/concurrency/course/basics/IncorrectSynchronizationTests.kt[`IncorrectSynchronizationTests`].
