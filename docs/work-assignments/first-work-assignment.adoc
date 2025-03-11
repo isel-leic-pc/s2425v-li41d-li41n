@@ -3,7 +3,7 @@
 ## Introduction
 
 This document contains the requirements for the first work assignment of the Concurrent Programming (_Programação Concorrente_) course.
-The solution to this work assignment must be delivered until the end of 2025-03-30.
+The solution to this work assignment must be delivered until the end of 2025-03-30, via the creation (and push) of the `0.1.0` Git tag.
 For each requirement:
 
 * Include technical documentation with the solution design, e.g. as a KDoc to the complete class (e.g. link:https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/common/src/CoroutineScope.kt#L11-L74[example]).
@@ -18,6 +18,7 @@ Develop the `BoundedStream<T>` class implementing a thread-safe bounded multi-pr
 Each instance is constructed with a capacity.
 Producers write items of type `T` into the end of the stream.
 If the stream is already at full capacity, then the oldest item (i.e. the item with lowest index) is discarded.
+Indexes are not reused, i.e., no two written items can have the same index.
 
 Consumers read items starting at a given index: if this index is lower or equal that the stream's highest index, then the read request is completed immediately; otherwise the read will block until the stream has elements with index greater or equal to the requested one.
 The read operation does not remove the items of the stream.
@@ -25,7 +26,7 @@ Each consumer is responsible for maintaining its own reading index independently
 
 The stream should also support a close operation, after which all read or write operations should terminate immediately with an indication of the stream closed state.
 
-The blocking operations, namely the `read` function, must support cancellation via timeout and must also implement the JVM interrupt protocol.
+The blocking operations, namely the `read` function, must support cancellation via timeout and must also implement the JVM interruption protocol.
 
 .The `BoundedStream` class
 [#BoundedStream,kotlin]   
@@ -105,13 +106,13 @@ class ThreadScope(...) : Closeable {
 Implement a TCP server, based on the examples provided in the lectures, where a line sent via a connection is broadcasted to all other active connections.
 Use the `BoundedStream<T>` class to hold the last N lines and to support the communication between connections.
 
-Each connection should use two threads: a _reader_ thread that reads from the socket and writes into a shared `BoundedStream<T>`; a _writer_ threads that reads from the shared `BoundedStream<T>` and writes into the socket.
-Use the `ThreadScope` to help correctly manage the created threads, namely:
+Each connection should use two threads: a _reader_ thread that reads from the socket and writes into a shared `BoundedStream<T>`; a _writer_ thread that reads from the shared `BoundedStream<T>` and writes into the socket.
+Use the `ThreadScope` to help correctly manage the created threads, namely to ensure:
 
 * When a connection is closed, both associated threads are terminated.
 * When a server is closed, all associated threads are terminated. Namely, when waiting for a server to terminate, this wait should consider all threads created in the context of that server.
 
-This TCP server should support the following additional functionality:
+This TCP server should also support the following additional functionality:
 
 * Use JVM's _shutdown hooks_ to correctly terminate a server.
 * Support listening for incoming connections in more than one port.
