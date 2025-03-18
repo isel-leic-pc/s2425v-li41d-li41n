@@ -104,3 +104,36 @@ Lecture 5 - 2025-03-07 - 1.5h
 * Resources
     ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/lecture-notes/data-synchronization-jvm.adoc[Data synchronization in the JVM].
     ** link:https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/code/jvm/src/test/kotlin/org/pedrofelix/concurrency/course/basics/IncorrectSynchronizationTests.kt[`IncorrectSynchronizationTests`].
+
+Lecture 6 - 2025-03-11 - 3.0h
+-----------------------------
+* Control Synchronization.
+    ** The concept of control synchronization and synchronizers.
+    ** The _semaphore_ as an example of a synchronizer.
+    ** Example: using semaphores to limit the number of connections being handled by the TCP server.
+* Designing and implementing synchronizers using monitors.
+    ** The monitor concept: a _lock_ plus one or more _conditions_.
+    ** Interactions between the lock and the condition operations.
+        *** The condition's _await_ operation and its relation with lock possession.
+        *** The condition's _wait set_ and the _signal_ operation.
+    ** Lock ownership between signaling and signaled thread (i.e. thread selected to leave the wait set).
+    ** Example: an unary semaphore without fairness guarantees.
+    ** Example: an unary semaphore with fairness guarantees.
+    ** Using more than one condition to avoid broadcast signalling.
+* JVM's thread interruption mechanism.
+
+* Resources
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main/code/jvm/src/main/kotlin/org/pedrofelix/concurrency/course/sync[Synchronizer examples].
+    ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/synchronizers[Lecture examples]
+
+Lecture 7 - 2025-03-14 - 1.5h
+-----------------------------
+
+* JVM's thread interruption mechanism.
+* Adding cancellation by timeout or interruption to a synchronizer.
+    ** Concurrency between signalling, timeout, and interruption.
+    ** JVM's guarantees (link:https://docs.oracle.com/javase/specs/jls/se21/html/jls-17.html#jls-17.2.4[Interactions of Waits, Notification, and Interruption]).
+
+* Resources
+    ** link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main/code/jvm/src/main/kotlin/org/pedrofelix/concurrency/course/sync[Synchronizer examples].
+    ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/synchronizers[Lecture examples]
