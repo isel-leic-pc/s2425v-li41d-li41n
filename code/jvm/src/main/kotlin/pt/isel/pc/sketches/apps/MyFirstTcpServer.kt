@@ -19,9 +19,6 @@ class MyFirstTcpServer(
         private val logger = LoggerFactory.getLogger(MyFirstTcpServer::class.java)
     }
 
-    // Class instance variable
-    private var messageCounter = 0
-
     fun run() {
         logger.info("Server is starting")
         try {
@@ -36,10 +33,9 @@ class MyFirstTcpServer(
                 logger.info("Server is accepting connections on {}:{}", address.hostName, address.port)
                 val clientSocket = serverSocket.accept()
                 logger.info("New connection was accepted")
-                clientCounter += 1
+                val connectionId = clientCounter++
                 threadBuilder.start {
-                    // connectionLoop(clientSocket, connectionNumber)
-                    connectionLoop(clientSocket, clientCounter)
+                    connectionLoop(clientSocket, connectionId)
                 }
             }
         } catch (ex: Exception) {
@@ -63,7 +59,8 @@ class MyFirstTcpServer(
                         return
                     }
                     logger.info("New line received from the connection {}", line)
-                    writer.writeLine("${messageCounter++}:${line.uppercase()}")
+                    writer.writeLine("$messageCounter:${line.uppercase()}")
+                    messageCounter += 1
                 }
             }
         }
