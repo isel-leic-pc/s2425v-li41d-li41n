@@ -128,7 +128,6 @@ Lecture 6 - 2025-03-11 - 3.0h
 
 Lecture 7 - 2025-03-14 - 1.5h
 -----------------------------
-
 * JVM's thread interruption mechanism.
 * Adding cancellation by timeout or interruption to a synchronizer.
     ** Concurrency between signalling, timeout, and interruption.
@@ -137,3 +136,26 @@ Lecture 7 - 2025-03-14 - 1.5h
 * Resources
     ** link:https://github.com/pmhsfelix/course-jvm-concurrency/tree/main/code/jvm/src/main/kotlin/org/pedrofelix/concurrency/course/sync[Synchronizer examples].
     ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/synchronizers[Lecture examples]
+
+Lecture 8 - 2025-03-18 - 3.0h
+-----------------------------
+* Laboratory class to support the development of the first work assignment.
+* Designing and implementing stress-tests for synchronizers and thread-safe classes.
+
+Lecture 9 - 2025-03-21 - 1.5h
+-----------------------------
+* Continuing the study of monitor-based synchronizers - the _kernel-style_ technique to synchronizer design.
+    ** Comparison with the _monitor-style_ technique.
+    ** Implementation of an unary semaphore with fairness, using this technique.
+    ** Implementation of a n-ary semaphore with fairness, using this technique.
+
+Lecture 10 - 2025-03-25 - 3.0h
+-----------------------------
+* Continuing the study of monitor-based synchronizers
+    ** A synchronous queue, designed using the _kernel-style_ technique.
+    ** A simple thread pool.
+* Laboratory to support the development of the first work assignment.
+
+Lecture 11 - 2025-03-28 - 1.5h
+-----------------------------
+Laboratory class to support the development of the first work assignment.
