@@ -31,10 +31,10 @@ class ThreadPoolExecutor(
 }
 ----
 
-The maximum number of worker threads (`maxThreadPoolSize`) and the maximum time that a worker thread can remain idle before terminating (`keepAliveTime`) are passed as `ThreadPoolExecutor`` constructor arguments.
+The maximum number of worker threads (`maxThreadPoolSize`) and the maximum time that a worker thread can remain idle before terminating (`keepAliveTime`) are passed as `ThreadPoolExecutor` constructor arguments.
 The management of the worker threads by the synchronizer must follow these criteria:
 
-* If the total number of worker threads is less than the specified maximum limit, a new worker thread is created whenever a continuation is submitted for execution and no worker thread is available.
+* If the total number of worker threads is less than the specified maximum limit and no worker thread is available, a new worker thread is created whenever a continuation is submitted for execution.
 
 * Worker threads should terminate after the amount of time specified in `keepAliveTime` has passed without them being assigned a continuation to execute.
 
@@ -49,7 +49,7 @@ The `awaitTermination` method allows any calling thread to synchronize with the 
 
 * normally, returning true if the shutdown of the executor completes;
 
-* exceptionally, returning false if the timeout specified as an argument expires before shutdown completes;
+* normally, returning false if the timeout specified as an argument expires before shutdown completes;
 
 * exceptionally, by throwing `InterruptedException` if the calling thread is interrupted while waiting.
 
@@ -93,7 +93,7 @@ fun show(vararg periodicMessages: PeriodicMessage) {...}
 
 Implement the `show` function that concurrently shows all periodic messages provided as arguments.
 The `show` function returns when all periodic messages are completely shown.
-Use `suspend` functions so that showing of each periodic message is internally accomplished by the following suspend function, where `sleep` is an internal auxiliary function that needs to be implemented.
+Use `suspend` functions so that showing each periodic message is internally accomplished by the following suspend function, where `sleep` is an internal auxiliary function that needs to be implemented.
 
 [#showPeriodicMessage, kotlin] 
 ----
@@ -101,11 +101,11 @@ suspend fun showPeriodicMessage(msg: PeriodicMessage) {
     repeat(msg.nOfRepetitions) {
         msg.strings.forEach { string ->
             println(string)
-            sleep(msg.delay)
+            sleep(msg.delayBetweenStrings)
         }
     }
 }
 ----
 
-Do not create any threads to show the periodic messages, directly or indirectly (e.g. via an executor). Namely, all `println` calls should occur in the thread that called `show`.
+The implementation of this requirement must not create any threads, directly or indirectly (e.g. via an executor). Namely, all `println` calls should occur in the thread that called `show`.
 Do not use any functionality from the `kotlinx.coroutines` package.
