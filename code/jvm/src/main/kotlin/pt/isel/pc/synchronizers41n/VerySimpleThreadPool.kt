@@ -23,6 +23,26 @@ class VerySimpleThreadPool(
         }
 
     private fun workerThreadLoop(firstRunnable: Runnable) {
-        TODO("")
+        var currentRunnable: Runnable = firstRunnable
+        while (true) {
+            try {
+                currentRunnable.run()
+            } catch (ex: Exception) {
+                // TODO log exception
+            }
+            Thread.interrupted()
+            currentRunnable = getNextWorkItem()
+                ?: break
+        }
     }
+
+    private fun getNextWorkItem(): Runnable? =
+        mutex.withLock {
+            return if (workItems.isNotEmpty()) {
+                workItems.removeFirst()
+            } else {
+                nOfWorkerThreads -= 1
+                null
+            }
+        }
 }

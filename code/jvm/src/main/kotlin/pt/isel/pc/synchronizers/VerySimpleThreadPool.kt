@@ -11,14 +11,14 @@ class VerySimpleThreadPool(
     }
 
     private val mutex = ReentrantLock()
-    private var numberOfThreads = 0
+    private var numberOfWorkerThreads = 0
     private val workItems = mutableListOf<Runnable>()
 
     fun execute(runnable: Runnable) {
         mutex.withLock {
-            if (numberOfThreads < maxThreads) {
+            if (numberOfWorkerThreads < maxThreads) {
                 // create a new worker thread
-                numberOfThreads += 1
+                numberOfWorkerThreads += 1
                 Thread.ofPlatform().start {
                     workerThreadLoop(runnable)
                 }
@@ -36,6 +36,7 @@ class VerySimpleThreadPool(
                 currentRunnable.run()
             } catch (ex: Throwable) {
                 // ignore exceptions
+                // TODO log exception
             }
             // clear the interrupt status
             Thread.interrupted()
@@ -47,7 +48,7 @@ class VerySimpleThreadPool(
     private fun getNextWorkItem(): Runnable? {
         mutex.withLock {
             if (workItems.isEmpty()) {
-                numberOfThreads -= 1
+                numberOfWorkerThreads -= 1
                 return null
             } else {
                 return workItems.removeFirst()
