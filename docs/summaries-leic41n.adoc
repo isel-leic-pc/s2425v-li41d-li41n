@@ -178,3 +178,35 @@ Lecture 13 - 2025-04-04 - 3.0h
     ** The guarantees provided by final fields.
 * Resources:
     ** link:https://jcip.net[Java Concurrency in Practice], chapter 16.
+
+Lecture 14 - 2025-04-08 - 1.5h
+-----------------------------
+
+* Introduction to Kotlin Coroutines
+    ** Two levels of coroutine related functionality.
+        *** Low-level - language constructs and types and functions present in the standard library.
+        *** High-level - the `kotlinx.coroutines` library.
+    ** Coroutines as sequential computations that can be suspended and resumed.
+    ** `suspend` functions and their characteristics.
+    ** Suspension and the `suspendCoroutine` function.
+    ** Resumption and the `Continuation` interface.
+    
+* Resources:
+    ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches/coroutines[https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches/coroutines]
+    ** link:https://kotlinlang.org/docs/coroutines-overview.html#how-to-start[Coroutines: how to start]
+
+Lecture 15 - 2025-04-11 - 3.0h
+-----------------------------
+* Continuing the study of Kotlin Coroutines
+    ** The _Continuation Passing Style_ (CPS) vs the _Direct Style_ (DS).
+    ** Starting coroutines
+        ** Casting suspend functions to non-suspend functions
+        ** Using the `startCoroutine` function.
+    ** Application examples.
+    ** Application examples.
+        *** Running multiple coroutines on a single thread with a _yield_ function.
+        *** Implementing a suspend sleep function.
+
+* Resources:
+    ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches/coroutines[https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches/coroutines]
+    ** link:https://kotlinlang.org/docs/coroutines-overview.html#how-to-start[Coroutines: how to start]
