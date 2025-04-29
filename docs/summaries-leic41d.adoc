@@ -211,3 +211,7 @@ Lecture 15 - 2025-04-11 - 1.5h
 * Resources:
     ** link:https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches/coroutines[https://github.com/isel-leic-pc/s2425v-li41d-li41n/tree/main/code/jvm/src/main/kotlin/pt/isel/pc/sketches/coroutines]
     ** link:https://kotlinlang.org/docs/coroutines-overview.html#how-to-start[Coroutines: how to start]
+
+Lecture 16 - 2025-04-15 - 3.0h
+-----------------------------
+* Supporting the development of the second work assignment.
