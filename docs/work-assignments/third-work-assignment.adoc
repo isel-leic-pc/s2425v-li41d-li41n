@@ -7,16 +7,16 @@ The solution to this work assignment must be delivered until the end of 2025-06-
 For each requirement:
 
 * Include technical documentation with the solution design, e.g. as a KDoc to the complete class (e.g. link:https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/common/src/CoroutineScope.kt#L11-L74[example]).
-* Include automated tests, including both basic functional tests and _stress tests_ (if applicable).
+* Include automated tests, including both basic functional tests and _stress tests_ (when applicable).
 
 This work assignment should be done in groups of 3 students.
 
 == Requirement 1 - `BoundedStream<T>` class with suspend interface.
 
-Develop a version of the `BoundedStream<T>` class, introduced in the first work assignment, having both the `write` and `read` functions be `suspend` functions. 
-Neither of these functions should block the calling thread while waiting for the operation to complete.
+Implement a version of the `BoundedStream<T>`` class, as introduced in the first assignment, in which both `write` and `read` functions are `suspend`. 
+These functions must not block the calling thread while waiting for their respective operations to complete.
 
-== Requirement 2 - `BoundedStream<T>` with a flow interface.
+== Requirement 2 (optional) - `BoundedStream<T>` with a flow interface.
 
 Create the following extension function, to access the items of a `BoundedStream` as a Kotlin flow.
 
@@ -24,12 +24,15 @@ Create the following extension function, to access the items of a `BoundedStream
 [#asFlow,kotlin]
 ----
 fun <T> BoundedStream<T>.asFlow(): Flow<Pair<Long, T>>
----- 
+----
+
+Each item in the flow is a pair containing an item in the bounded stream and its index.
+Each collect of a flow returned by this function should start with the oldest element present in the bounded stream when the collect was initiated.
 
 == Requirement 3 - Broadcast TCP server
 
 Implement a version of the broadcast TCP server, presented in the first work assignment, using coroutines instead of threads whenever possible.
-Namely, the implementation should use a constant number of threads, independently of the number of listening ports or established connections.
+Namely, the implementation should use a constant number of threads, independent of the number of listening ports or established connections.
 The socket operations should use _asynchronous socket channels_, available in the Java Standard library (`java.nio.channels` package).
 
 == Requirement 4 (optional) - Broadcast TCP server with Server-Sent Events.
