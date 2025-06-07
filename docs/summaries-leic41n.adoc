@@ -214,3 +214,82 @@ Lecture 15 - 2025-04-11 - 3.0h
 Lecture 16 - 2025-04-15 - 1.5h
 -----------------------------
 * Supporting the development of the second work assignment.
+
+Lecture 17 - 2025-04-29 - 1.5h
+-----------------------------
+* Supporting the development of the second work assignment.
+
+Lecture 18 - 2025-05-02 - 3.0h
+-----------------------------
+* Supporting the development of the second work assignment.
+
+Lecture 19 - 2025-05-06 - 1.5h
+-----------------------------
+
+* The `kotlinx.coroutines` library and structured concurrency.
+    ** Coroutines builders and the coroutine scope.
+    ** Parent-child relations in coroutines.
+    ** Coroutine lifetime and the `Job` interface.
+    ** Coroutine dispatchers and thread usage.
+
+Lecture 20 - 2025-05-09 - 3.0h
+-----------------------------
+
+* Laboratory class about Kotlin Coroutines and structured concurrency.
+
+* Resources
+    ** link: https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/exercises/coroutines.adoc
+
+Lecture 21 - 2025-05-13 - 1.5h
+-----------------------------
+
+* Continuing the study of structured concurrency.
+* Asynchronous I/O.
+    ** The relation between threading and I/O operations with non-busy waiting.
+    ** Asynchronous interfaces vs. synchronous interfaces.
+    ** Transforming asynchronous interfaces into _suspendable_ functions using the `suspendCoroutine` function.
+    ** Asynchronous I/O in the Java standard library.
+
+Lecture 22 - 2025-05-16 - 3.0h
+-----------------------------
+
+* Laboratory class about asynchronous I/O in the JVM, and its integration with Kotlin coroutines.
+
+* Resources:
+    ** link: https://github.com/pmhsfelix/course-jvm-concurrency/blob/main/docs/exercises/nio.adoc
+    ** link: https://docs.oracle.com/javase/8/docs/api/java/nio/channels/package-summary.html
+
+Lecture 23 - 2025-05-20 - 1.5h
+-----------------------------
+
+* Kotlin Asynchronous Flows
+    ** The multiple ways of representing and operating on sequences of items: lists, iterators, sequences.
+        *** Lazy vs. eager evaluation.
+    ** Kotlin flows as another way of representing and operating on sequences of items, where the production, intermediate transformation, and final consumption can involve suspend functions, i.e., be asynchronous.
+    ** Pull-style APIs vs push-style APIs for sequences.
+    ** The `Flow` and `FlowCollector` interfaces.
+    ** Intermediate operations, such as `map` and `filter`.
+    ** Terminal operations, such as `collect`, `fold`, and `first`.
+    ** The `flow` flow builder.
+
+* Resources
+    ** link: https://kotlinlang.org/docs/flow.html[Asynchronous Flow]
+
+Lecture 24 - 2025-05-23 - 3.0h
+-----------------------------
+
+* Continuing the study of Kotlin asynchronous flows
+    ** Relation between coroutines and flow production, transformation, and final consumption.
+    ** Channel usage in flows.
+
+* Supporting the development of the third work assignment.
+
+Lecture 25 - 2025-05-27 - 1.5h
+------------------------------
+
+* Supporting the development of the third work assignment.
+
+Lecture 26 - 2025-05-30 - 1.5h
+------------------------------
+
+* Supporting the development of the third work assignment.
