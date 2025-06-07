@@ -301,3 +301,13 @@ Lecture 26 - 2025-05-30 - 1.5h
 
 * Resources
     ** Chapter "Atomic Variables and Non-blocking Synchronization".
+
+Lecture 27 - 2025-06-03 - 3.0h
+------------------------------
+
+* Work assignment evaluation and discussions.
+
+Lecture 28 - 2025-06-06 - 1.5h
+------------------------------
+
+* Work assignment evaluation and discussions.
